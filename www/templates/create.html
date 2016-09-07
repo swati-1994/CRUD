@@ -1,0 +1,58 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+
+<ion-view view-title="add_employee">
+
+
+  <ion-content class="padding" ng-controller="createCtrl">
+    <form name="myForm" novalidate>
+      <div class="list">
+
+
+        <label class="item item-input item-floating-label">
+          <span class="input-label">image-path</span>
+          <input ng-model="list.image_path" type="text" placeholder="image_path">
+        </label>
+        <!-- <label class="item item-input item-floating-label">
+          <span class="input-label">id</span>
+          <input ng-model="list.id" type="number" placeholder="employee_id">
+        </label> -->
+
+        <label class="item item-input item-floating-label">
+          <span class="input-label">name</span>
+
+
+          <input name="firstname" ng-model="list.first" type="text" placeholder="First Name" ng-minlength="3" required>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Last Name</span>
+          <input ng-model="list.last" type="text" placeholder="last name">
+        </label>
+
+        <label class="item item-input item-floating-label">
+          <span class="input-label">gender</span>
+          <input ng-model="list.gender" type="text" placeholder="gender" ng-minlength="4" required>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">contact</span>
+          <input name="contact" ng-model="list.contact" type="number" placeholder="contact number" ng-minlength="5" required>
+        </label>
+      </div>
+
+      <div class="padding">
+        <p ng-show="myForm.firstname.$error.required">* Username is required</p>
+        <p ng-show="myForm.contact.$error.minlength">* contact must be longer than 5 characters</p>
+      </div>
+      <button class="button button-full button-positive" ng-disabled="myForm.$invalid" ng-click="submit()">
+        Submit
+      </button>
+    </form>
+
+  </ion-content>
+</ion-view>
+
+

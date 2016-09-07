@@ -1,0 +1,15 @@
+{
+  "list": [
+    {
+      "name": "milind",
+      "quality": "smart",
+      "image_path": "img/milind1.jpg"
+    },
+
+    {
+      "name": "milind",
+      "quality": "perfect",
+      "image_path": "img/milind4.jpg"
+    }
+  ]
+}

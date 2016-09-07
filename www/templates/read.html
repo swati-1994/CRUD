@@ -1,0 +1,23 @@
+<ion-view view-title="employees">
+  <ion-content ng-init="read()">
+
+    <ion-list view-title="read about milind"  show-delete="false"  can-swipe="true" >
+      <ion-item class="item item-thumbnail-left" ng-repeat="x in list">
+        <img ng-src="{{x.image_path}}">
+
+        <p>{{x.first}}</p>
+        <p>{{x.last}}</p>
+        <p>{{x.gender}}</p>
+        <p>{{x.contact}}</p>
+
+
+
+
+        <ion-option-button class="button-light icon ion-ios-plus" ng-click="edit()"></ion-option-button>
+        <ion-option-button class="button-light icon ion-email" ng-click="email()"></ion-option-button>
+        <ion-option-button class="button-assertive icon ion-trash-a" ng-click="delete(x.id)"> </ion-option-button>
+
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
